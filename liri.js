@@ -5,6 +5,7 @@ var fs = require('fs');
 var path = require('path');
 var Spotify = require('node-spotify-api');
 var axios = require('axios');
+var moment = require('moment');
 
 /* Spotify ID constructor */
 var spotify = new Spotify(keys.spotify);
@@ -13,15 +14,20 @@ var spotify = new Spotify(keys.spotify);
 var inputIndex1 = process.argv[2];
 var userInput = process.argv.slice(3).join("+");
 
-console.log(userInput)
+console.log(userInput + '\n');
 
+/* empty log array to be pushed to from functions */
+var log = [];
+
+/* write arguments to log */
+fs.appendFileSync('log.txt', `${inputIndex1} ${userInput}`);
 
 /* Begin movie-this command code */
 if (inputIndex1 === 'movie-this') {
     if (userInput !== undefined) {
         OMDB(userInput);
     } else {
-        uInput = "MrNobody"
+        uInput = "Mr Nobody"
         OMDB(uInput)
     };
 }
@@ -41,6 +47,10 @@ if (inputIndex1 === "spotify-this") {
 }
 /* End spotify-this code */
 
+if (inputIndex1 === 'do-what-it-says') {
+    doWhatSays();
+}
+
 
 /* Function to run OMDB api calls */
 function OMDB(userInput) {
@@ -55,12 +65,16 @@ function OMDB(userInput) {
                 "Title: " + rData.Title + "\r\n",
                 "Year Released: " + rData.Year + "\r\n",
                 "IMDB Rating " + rData.imdbRating + "\r\n",
-                //rData.Ratings[1].Source + ":", rData.Ratings[1].Value + "\r\n", //rotten tomatoes rating
+                rData.Ratings[1].Source + ":", rData.Ratings[1].Value + "\r\n", //rotten tomatoes rating
                 "Country: " + rData.Country + "\r\n",
                 "Language: " + rData.Language + "\r\n",
                 "Plot: " + rData.Plot + "\r\n",
                 "Actors: " + rData.Actors
             ); /* End Console Log */
+
+            /* Code to write data to log */
+            log.push("Movie Data: ", rData.Title, rData.Year, rData.imdbRating, rData.Ratings[1].Source, ":", rData.Ratings[1].Value, rData.Country, rData.Language, rData.Plot, rData.Actors)
+            fs.appendFileSync("log.txt", log);
         });
 }
 
@@ -69,19 +83,28 @@ function OMDB(userInput) {
 function bandsInTown(artist) {
     axios.get("https://rest.bandsintown.com/artists/" + artist + "/events?app_id=codingbootcamp&date=upcoming")
         .then(function (response) {
-            // console.log(JSON.stringify(response.data, null, 2));
-            fs.writeFileSync(path.resolve(__dirname, './results.json'), JSON.stringify(response.data, null, 2));
             var rData = response.data;
             console.log(response.data[0].lineup);
             for (var i = 0; i < rData.length; i++) {
-                console.log(rData[i].lineup);
+                var venue = rData[i].venue.name
+                var city = rData[i].venue.city
+                var region = rData[i].venue.region
+                var time = moment(rData.datetime).format('MM/DD/YYYY')
+
+                console.log(`Event #${i}`);
+                console.log(`Venue: ${venue}`);
+                console.log(`Location: ${city}, ${region}`);
+                console.log(`Date: ${time} \n`);
+
+                log.push("Band Data: ", `event#${i}`, venue, city, region, time);
+                fs.appendFileSync("log.txt", log);
             }
         })
 }
 
 
 /* Function to run spotify api calls */
-function spotifyAPI(song){
+function spotifyAPI(song) {
     spotify
         .search({
             type: 'track',
@@ -89,12 +112,29 @@ function spotifyAPI(song){
             limit: '1'
         })
         .then(function (response) {
-            //fs.writeFileSync(path.resolve(__dirname, './results.json'), response);
             var dataObject = response.tracks.items[0]
-            //console.log(JSON.stringify(response, null, 2));
-            console.log(dataObject.artists[0].name)
+            var artist = dataObject.artists[0].name;
+            var album = dataObject.album.name;
+            var track = dataObject.name;
+            var link = dataObject.external_urls.spotify;
+
+            console.log("Artist: " + artist + "\n");
+            console.log("Album: " + album + "\n");
+            console.log("Song: " + track + "\n");
+            console.log("Link: " + link + "\n");
+
+            log.push("Spotify Data: ", artist, album, track, link)
+            fs.appendFileSync("log.txt", log);
         })
         .catch(function (err) {
             console.log(err);
         });
+}
+
+function doWhatSays() {
+    var whatSays = fs.readFileSync("random.txt", "utf8").split(',');
+
+    console.log(whatSays[0])
+    inputIndex1 = whatSays[0];
+    userInput = whatSays[1];
 }

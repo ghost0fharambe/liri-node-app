@@ -1,360 +1,158 @@
-[{
-    "id": "1012051772",
-    "artist_id": "1053",
-    "url": "https://www.bandsintown.com/e/1012051772?app_id=codingbootcamp&came_from=267&utm_medium=api&utm_source=public_api&utm_campaign=event",
-    "on_sale_datetime": "2018-10-06T17:00:00",
-    "datetime": "2018-12-28T21:00:00",
-    "description": "If you purchase a ticket at a table, you are required to order dinner. Minimum spend is $25.00 per person. You must arrive by 7pm.",
+[
+  {
+    "offers": [
+      {
+        "type": "Tickets",
+        "url": "https://www.bandsintown.com/t/1012051772?app_id=codingbootcamp&came_from=267&utm_medium=api&utm_source=public_api&utm_campaign=ticket",
+        "status": "available"
+      }
+    ],
     "venue": {
+      "name": "The Canyon Santa Clarita",
       "country": "United States",
+      "region": "CA",
       "city": "Santa Clarita",
       "latitude": "34.414751",
-      "name": "The Canyon Santa Clarita",
-      "region": "CA",
       "longitude": "-118.558256"
     },
+    "datetime": "2018-12-28T21:00:00",
+    "on_sale_datetime": "2018-10-06T17:00:00",
+    "description": "If you purchase a ticket at a table, you are required to order dinner. Minimum spend is $25.00 per person. You must arrive by 7pm.",
     "lineup": [
       "Gin Blossoms"
     ],
-    "offers": [{
-      "type": "Tickets",
-      "url": "https://www.bandsintown.com/t/1012051772?app_id=codingbootcamp&came_from=267&utm_medium=api&utm_source=public_api&utm_campaign=ticket",
-      "status": "available"
-    }]
+    "id": "1012051772",
+    "artist_id": "1053",
+    "url": "https://www.bandsintown.com/e/1012051772?app_id=codingbootcamp&came_from=267&utm_medium=api&utm_source=public_api&utm_campaign=event"
   },
   {
-    "id": "1012052589",
-    "artist_id": "1053",
-    "url": "https://www.bandsintown.com/e/1012052589?app_id=codingbootcamp&came_from=267&utm_medium=api&utm_source=public_api&utm_campaign=event",
-    "on_sale_datetime": "2018-10-06T17:00:00",
-    "datetime": "2018-12-29T21:00:00",
-    "description": "If you purchase a ticket at a table, you are required to order dinner. Minimum spend is $25.00 per person. You must arrive by 7pm.",
+    "offers": [
+      {
+        "type": "Tickets",
+        "url": "https://www.bandsintown.com/t/1012052589?app_id=codingbootcamp&came_from=267&utm_medium=api&utm_source=public_api&utm_campaign=ticket",
+        "status": "available"
+      }
+    ],
     "venue": {
+      "name": "The Canyon",
       "country": "United States",
+      "region": "CA",
       "city": "Agoura Hills",
       "latitude": "34.144004",
-      "name": "The Canyon",
-      "region": "CA",
       "longitude": "-118.7551541"
     },
+    "datetime": "2018-12-29T21:00:00",
+    "on_sale_datetime": "2018-10-06T17:00:00",
+    "description": "If you purchase a ticket at a table, you are required to order dinner. Minimum spend is $25.00 per person. You must arrive by 7pm.",
     "lineup": [
       "Gin Blossoms"
     ],
-    "offers": [{
-      "type": "Tickets",
-      "url": "https://www.bandsintown.com/t/1012052589?app_id=codingbootcamp&came_from=267&utm_medium=api&utm_source=public_api&utm_campaign=ticket",
-      "status": "available"
-    }]
+    "id": "1012052589",
+    "artist_id": "1053",
+    "url": "https://www.bandsintown.com/e/1012052589?app_id=codingbootcamp&came_from=267&utm_medium=api&utm_source=public_api&utm_campaign=event"
   },
   {
-    "id": "1012049119",
-    "artist_id": "1053",
-    "url": "https://www.bandsintown.com/e/1012049119?app_id=codingbootcamp&came_from=267&utm_medium=api&utm_source=public_api&utm_campaign=event",
-    "on_sale_datetime": "2018-10-06T17:00:00",
-    "datetime": "2018-12-30T21:00:00",
-    "description": "ALL SEATS MUST ARRIVE BY 7PM. If you purchase a ticket at a table, you are required to order dinner. Minimum spend is $25.00 per person. If you arrive after 7pm the priority seating you selected is not guaranteed, and you may be moved to best available.",
+    "offers": [
+      {
+        "type": "Tickets",
+        "url": "https://www.bandsintown.com/t/1012049119?app_id=codingbootcamp&came_from=267&utm_medium=api&utm_source=public_api&utm_campaign=ticket",
+        "status": "available"
+      }
+    ],
     "venue": {
+      "name": "The Rose",
       "country": "United States",
+      "region": "CA",
       "city": "Pasadena",
       "latitude": "34.1445579",
-      "name": "The Rose",
-      "region": "CA",
       "longitude": "-118.1450515"
     },
+    "datetime": "2018-12-30T21:00:00",
+    "on_sale_datetime": "2018-10-06T17:00:00",
+    "description": "ALL SEATS MUST ARRIVE BY 7PM. If you purchase a ticket at a table, you are required to order dinner. Minimum spend is $25.00 per person. If you arrive after 7pm the priority seating you selected is not guaranteed, and you may be moved to best available.",
     "lineup": [
       "Gin Blossoms"
     ],
-    "offers": [{
-      "type": "Tickets",
-      "url": "https://www.bandsintown.com/t/1012049119?app_id=codingbootcamp&came_from=267&utm_medium=api&utm_source=public_api&utm_campaign=ticket",
-      "status": "available"
-    }]
+    "id": "1012049119",
+    "artist_id": "1053",
+    "url": "https://www.bandsintown.com/e/1012049119?app_id=codingbootcamp&came_from=267&utm_medium=api&utm_source=public_api&utm_campaign=event"
   },
   {
-    "id": "1012448890",
-    "artist_id": "1053",
-    "url": "https://www.bandsintown.com/e/1012448890?app_id=codingbootcamp&came_from=267&utm_medium=api&utm_source=public_api&utm_campaign=event",
-    "on_sale_datetime": "2018-11-16T16:00:00",
-    "datetime": "2019-01-25T20:30:00",
-    "description": "Must be at least 18 years old or accompanied by an adult to attend this event.",
+    "offers": [
+      {
+        "type": "Tickets",
+        "url": "https://www.bandsintown.com/t/1012448890?app_id=codingbootcamp&came_from=267&utm_medium=api&utm_source=public_api&utm_campaign=ticket",
+        "status": "available"
+      }
+    ],
     "venue": {
+      "name": "Ameristar Casino Hotel Kansas City",
       "country": "United States",
+      "region": "MO",
       "city": "Kansas City",
       "latitude": "39.151053",
-      "name": "Ameristar Casino Hotel Kansas City",
-      "region": "MO",
       "longitude": "-94.477291"
     },
+    "datetime": "2019-01-25T20:30:00",
+    "on_sale_datetime": "2018-11-16T16:00:00",
+    "description": "Must be at least 18 years old or accompanied by an adult to attend this event.",
     "lineup": [
       "Gin Blossoms"
     ],
-    "offers": [{
-      "type": "Tickets",
-      "url": "https://www.bandsintown.com/t/1012448890?app_id=codingbootcamp&came_from=267&utm_medium=api&utm_source=public_api&utm_campaign=ticket",
-      "status": "available"
-    }]
+    "id": "1012448890",
+    "artist_id": "1053",
+    "url": "https://www.bandsintown.com/e/1012448890?app_id=codingbootcamp&came_from=267&utm_medium=api&utm_source=public_api&utm_campaign=event"
   },
   {
-    "id": "1012346835",
-    "artist_id": "1053",
-    "url": "https://www.bandsintown.com/e/1012346835?app_id=codingbootcamp&came_from=267&utm_medium=api&utm_source=public_api&utm_campaign=event",
-    "on_sale_datetime": "2018-11-09T16:00:00",
-    "datetime": "2019-01-26T20:00:00",
-    "description": "",
+    "offers": [
+      {
+        "type": "Tickets",
+        "url": "https://www.bandsintown.com/t/1012346835?app_id=codingbootcamp&came_from=267&utm_medium=api&utm_source=public_api&utm_campaign=ticket",
+        "status": "available"
+      }
+    ],
     "venue": {
+      "name": "L'Auberge Casino & Hotel Baton Rouge",
       "country": "United States",
+      "region": "LA",
       "city": "Baton Rouge",
       "latitude": "30.345602",
-      "name": "L'Auberge Casino & Hotel Baton Rouge",
-      "region": "LA",
       "longitude": "-91.151"
     },
+    "datetime": "2019-01-26T20:00:00",
+    "on_sale_datetime": "2018-11-09T16:00:00",
+    "description": "",
     "lineup": [
       "Gin Blossoms"
     ],
-    "offers": [{
-      "type": "Tickets",
-      "url": "https://www.bandsintown.com/t/1012346835?app_id=codingbootcamp&came_from=267&utm_medium=api&utm_source=public_api&utm_campaign=ticket",
-      "status": "available"
-    }]
+    "id": "1012346835",
+    "artist_id": "1053",
+    "url": "https://www.bandsintown.com/e/1012346835?app_id=codingbootcamp&came_from=267&utm_medium=api&utm_source=public_api&utm_campaign=event"
   },
   {
-    "id": "1012888628",
-    "artist_id": "1053",
-    "url": "https://www.bandsintown.com/e/1012888628?app_id=codingbootcamp&came_from=267&utm_medium=api&utm_source=public_api&utm_campaign=event",
-    "on_sale_datetime": "2018-12-14T10:00:00",
-    "datetime": "2019-02-10T20:00:00",
-    "description": "Gin Blossoms",
+    "offers": [
+      {
+        "type": "Tickets",
+        "url": "https://www.bandsintown.com/t/1012888628?app_id=codingbootcamp&came_from=267&utm_medium=api&utm_source=public_api&utm_campaign=ticket",
+        "status": "available"
+      }
+    ],
     "venue": {
+      "name": "Center for the Arts of Homer",
       "country": "United States",
+      "region": "NY",
       "city": "Homer",
       "latitude": "42.634436",
-      "name": "Center for the Arts of Homer",
-      "region": "NY",
       "longitude": "-76.179348"
     },
+    "datetime": "2019-02-10T20:00:00",
+    "on_sale_datetime": "2018-12-14T10:00:00",
+    "description": "Gin Blossoms",
     "lineup": [
       "Gin Blossoms"
     ],
-    "offers": [{
-      "type": "Tickets",
-      "url": "https://www.bandsintown.com/t/1012888628?app_id=codingbootcamp&came_from=267&utm_medium=api&utm_source=public_api&utm_campaign=ticket",
-      "status": "available"
-    }]
+    "id": "1012888628",
+    "artist_id": "1053",
+    "url": "https://www.bandsintown.com/e/1012888628?app_id=codingbootcamp&came_from=267&utm_medium=api&utm_source=public_api&utm_campaign=event"
   }
 ]
-
-{
-  "tracks": {
-    "href": "https://api.spotify.com/v1/search?query=%22all+the+small+things%22&type=track&offset=0&limit=1",
-    "items": [{
-      "album": {
-        "album_type": "album",
-        "artists": [{
-          "external_urls": {
-            "spotify": "https://open.spotify.com/artist/6FBDaR13swtiWwGhX1WQsP"
-          },
-          "href": "https://api.spotify.com/v1/artists/6FBDaR13swtiWwGhX1WQsP",
-          "id": "6FBDaR13swtiWwGhX1WQsP",
-          "name": "blink-182",
-          "type": "artist",
-          "uri": "spotify:artist:6FBDaR13swtiWwGhX1WQsP"
-        }],
-        "available_markets": [
-          "AD",
-          "AR",
-          "AT",
-          "AU",
-          "BE",
-          "BG",
-          "BO",
-          "BR",
-          "CA",
-          "CH",
-          "CL",
-          "CO",
-          "CR",
-          "CY",
-          "CZ",
-          "DE",
-          "DK",
-          "DO",
-          "EC",
-          "EE",
-          "ES",
-          "FI",
-          "FR",
-          "GB",
-          "GR",
-          "GT",
-          "HK",
-          "HN",
-          "HU",
-          "ID",
-          "IE",
-          "IL",
-          "IS",
-          "IT",
-          "JP",
-          "LI",
-          "LT",
-          "LU",
-          "LV",
-          "MC",
-          "MT",
-          "MX",
-          "MY",
-          "NI",
-          "NL",
-          "NO",
-          "NZ",
-          "PA",
-          "PE",
-          "PH",
-          "PL",
-          "PT",
-          "PY",
-          "RO",
-          "SE",
-          "SG",
-          "SK",
-          "SV",
-          "TH",
-          "TR",
-          "TW",
-          "US",
-          "UY",
-          "VN",
-          "ZA"
-        ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/album/5qt11cWjSs5Gbqj2Wyfu38"
-        },
-        "href": "https://api.spotify.com/v1/albums/5qt11cWjSs5Gbqj2Wyfu38",
-        "id": "5qt11cWjSs5Gbqj2Wyfu38",
-        "images": [{
-            "height": 636,
-            "url": "https://i.scdn.co/image/13f894c1300cbdda027ff948ee963640c5126d29",
-            "width": 640
-          },
-          {
-            "height": 298,
-            "url": "https://i.scdn.co/image/13df38bffb65d58fde5341184282a908e49689d4",
-            "width": 300
-          },
-          {
-            "height": 64,
-            "url": "https://i.scdn.co/image/9c233fb13e1758e6035bc9e19d77cda1b18fe84e",
-            "width": 64
-          }
-        ],
-        "name": "Enema Of The State",
-        "release_date": "1999-01-01",
-        "release_date_precision": "day",
-        "total_tracks": 12,
-        "type": "album",
-        "uri": "spotify:album:5qt11cWjSs5Gbqj2Wyfu38"
-      },
-      "artists": [{
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/6FBDaR13swtiWwGhX1WQsP"
-        },
-        "href": "https://api.spotify.com/v1/artists/6FBDaR13swtiWwGhX1WQsP",
-        "id": "6FBDaR13swtiWwGhX1WQsP",
-        "name": "blink-182",
-        "type": "artist",
-        "uri": "spotify:artist:6FBDaR13swtiWwGhX1WQsP"
-      }],
-      "available_markets": [
-        "AD",
-        "AR",
-        "AT",
-        "AU",
-        "BE",
-        "BG",
-        "BO",
-        "BR",
-        "CA",
-        "CH",
-        "CL",
-        "CO",
-        "CR",
-        "CY",
-        "CZ",
-        "DE",
-        "DK",
-        "DO",
-        "EC",
-        "EE",
-        "ES",
-        "FI",
-        "FR",
-        "GB",
-        "GR",
-        "GT",
-        "HK",
-        "HN",
-        "HU",
-        "ID",
-        "IE",
-        "IL",
-        "IS",
-        "IT",
-        "JP",
-        "LI",
-        "LT",
-        "LU",
-        "LV",
-        "MC",
-        "MT",
-        "MX",
-        "MY",
-        "NI",
-        "NL",
-        "NO",
-        "NZ",
-        "PA",
-        "PE",
-        "PH",
-        "PL",
-        "PT",
-        "PY",
-        "RO",
-        "SE",
-        "SG",
-        "SK",
-        "SV",
-        "TH",
-        "TR",
-        "TW",
-        "US",
-        "UY",
-        "VN",
-        "ZA"
-      ],
-      "disc_number": 1,
-      "duration_ms": 168000,
-      "explicit": false,
-      "external_ids": {
-        "isrc": "USMC19959123"
-      },
-      "external_urls": {
-        "spotify": "https://open.spotify.com/track/7yCPwWs66K8Ba5lFuU2bcx"
-      },
-      "href": "https://api.spotify.com/v1/tracks/7yCPwWs66K8Ba5lFuU2bcx",
-      "id": "7yCPwWs66K8Ba5lFuU2bcx",
-      "is_local": false,
-      "name": "All The Small Things",
-      "popularity": 77,
-      "preview_url": null,
-      "track_number": 8,
-      "type": "track",
-      "uri": "spotify:track:7yCPwWs66K8Ba5lFuU2bcx"
-    }],
-    "limit": 1,
-    "next": "https://api.spotify.com/v1/search?query=%22all+the+small+things%22&type=track&offset=1&limit=1",
-    "offset": 0,
-    "previous": null,
-    "total": 421
-  }
-}
