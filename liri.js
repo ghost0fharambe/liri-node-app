@@ -14,8 +14,6 @@ var spotify = new Spotify(keys.spotify);
 var inputIndex1 = process.argv[2];
 var userInput = process.argv.slice(3).join("+");
 
-console.log(userInput + '\n');
-
 /* empty log array to be pushed to from functions */
 var log = [];
 
@@ -132,9 +130,8 @@ function spotifyAPI(song) {
 }
 
 function doWhatSays() {
-    var whatSays = fs.readFileSync("random.txt", "utf8").split(',');
-
-    console.log(whatSays[0])
-    inputIndex1 = whatSays[0];
-    userInput = whatSays[1];
+    var whatSays = fs.readFileSync("random.txt", "utf8").split(',');    
+    if (whatSays[0] === 'spotify-this') {
+        spotifyAPI(whatSays[1]);
+    }
 }
