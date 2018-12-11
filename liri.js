@@ -23,11 +23,11 @@ fs.appendFileSync('log.txt', `${inputIndex1} ${userInput}`);
 
 /* Begin movie-this command code */
 if (inputIndex1 === 'movie-this') {
-    if (userInput !== undefined) {
+    if (userInput !== '') {
         OMDB(userInput);
     } else {
-        uInput = "Mr Nobody"
-        OMDB(uInput)
+        let userInput = "mr nobody"
+        OMDB(userInput)
     };
 }
 /* End movie-this code */
@@ -35,14 +35,24 @@ if (inputIndex1 === 'movie-this') {
 
 /* Begin concert-this code */
 if (inputIndex1 === 'concert-this') {
-    bandsInTown(userInput);
+    if (userInput !== '') {
+        bandsInTown(userInput);
+    } else {
+        let userInput = 'daysndaze';
+        bandsInTown(userInput);
+    }
 }
 /* End concert-this code */
 
 
 /* Begin spotify-this code */
 if (inputIndex1 === "spotify-this") {
-    spotifyAPI(userInput)
+    if (userInput !== '') {
+        spotifyAPI(userInput);
+    } else {
+        let userInput = 'all the small things';
+        spotifyAPI(userInput);
+    }
 }
 /* End spotify-this code */
 
@@ -130,6 +140,7 @@ function spotifyAPI(song) {
         });
 }
 
+/* Runs program with parameters specified in random.txt */
 function doWhatSays() {
     var whatSays = fs.readFileSync("random.txt", "utf8").split(',');
     if (whatSays[0] === 'spotify-this') {
@@ -156,7 +167,11 @@ if (inputIndex1 === undefined) {
                         name: 'song'
                     }])
                     .then(function (response) {
-                        spotifyAPI(response.song);
+                        if (response.song !== '') {
+                            spotifyAPI(response.song);
+                        } else {
+                            spotifyAPI('all+the+small+things')
+                        };
                     });
             } else if (response.program === 'concert-this') {
                 inquirer
@@ -166,7 +181,11 @@ if (inputIndex1 === undefined) {
                         name: 'band'
                     }])
                     .then(function (response) {
-                        bandsInTown(response.band);
+                        if (response.band !== '') {
+                            bandsInTown(response.band);
+                        } else {
+                            bandsInTown('daysndaze');
+                        }
                     });
             } else if (response.program === 'movie-this') {
                 inquirer
@@ -176,7 +195,11 @@ if (inputIndex1 === undefined) {
                         name: 'movie'
                     }])
                     .then(function (response) {
-                        OMDB(response.movie);
+                        if (response.movie !== '') {
+                            OMDB(response.movie);
+                        } else {
+                            OMDB('Mr Nobody');
+                        }
                     });
             } else if (response.program === 'do-what-it-says') {
                 doWhatSays();

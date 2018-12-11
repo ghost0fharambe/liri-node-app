@@ -47,6 +47,8 @@ node liri.js movie-this <movie-name>
 Finds information about given movie
 
 e.g. `node liri.js movie-this lord of the rings`
+
+If no movie is given, defaults to **Mr Nobody**
 ***
 ```javascript
 node liri.js concert-this <band-name>
@@ -54,6 +56,8 @@ node liri.js concert-this <band-name>
 Finds upcoming events involving given band
 
 e.g. `node liri.js concert-this gin blossoms`
+
+If no band is given, defaults to **Days'N'Daze**
 ***
 ```javascript
 node liri.js spotify-this <song-name>
@@ -61,6 +65,8 @@ node liri.js spotify-this <song-name>
 Finds information about given song
 
 e.g. `node liri.js spotify-this your heart is a muscle the size of your fist`
+
+If no song is given, defaults to **"All the Small Things" by blink-182**
 ***
 ```javascript
 node liri.js do-what-it-says
