@@ -110,7 +110,7 @@ function bandsInTown(artist) {
                 console.log(`Location: ${city} ${region} ${country}`);
                 console.log(`Date: ${time} \n`);
 
-                log.push("Band Data: ", `event#${i}`, venue, city, region, time);
+                log.push("Band Data: ", `event#${i}`, lineup, venue, city, region, country, time);
                 fs.appendFileSync("log.txt", log);
             }
         })
