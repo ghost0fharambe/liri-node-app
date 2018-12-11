@@ -19,7 +19,9 @@ var userInput = process.argv.slice(3).join("+");
 var log = [];
 
 /* write arguments to log */
-fs.appendFileSync('log.txt', `${inputIndex1} ${userInput}`);
+if (inputIndex1 !== undefined) {
+    fs.appendFileSync('log.txt', `${inputIndex1} ${userInput} \n`);
+}
 
 /* Begin movie-this command code */
 if (inputIndex1 === 'movie-this') {
@@ -86,7 +88,7 @@ function OMDB(userInput) {
 
             /* Code to write data to log */
             log.push("Movie Data: ", rData.Title, rData.Year, rData.imdbRating, rData.Ratings[1].Source, ":", rData.Ratings[1].Value, rData.Country, rData.Language, rData.Plot, rData.Actors)
-            fs.appendFileSync("log.txt", log);
+            fs.appendFileSync("log.txt", log + '\n');
         });
 }
 
@@ -111,7 +113,7 @@ function bandsInTown(artist) {
                 console.log(`Date: ${time} \n`);
 
                 log.push("Band Data: ", `event#${i}`, lineup, venue, city, region, country, time);
-                fs.appendFileSync("log.txt", log);
+                fs.appendFileSync("log.txt", log + '\n');
             }
         })
 }
@@ -138,7 +140,7 @@ function spotifyAPI(song) {
             console.log("Link: " + link + "\n");
 
             log.push("Spotify Data: ", artist, album, track, link)
-            fs.appendFileSync("log.txt", log);
+            fs.appendFileSync("log.txt", log + '\n');
         })
         .catch(function (err) {
             console.log(err);
@@ -165,6 +167,7 @@ if (inputIndex1 === undefined) {
             name: 'program'
         }])
         .then(function (response) {
+            fs.appendFileSync('log.txt', response.program);
             if (response.program === 'spotify-this') {
                 inquirer
                     .prompt([{
@@ -175,6 +178,7 @@ if (inputIndex1 === undefined) {
                     .then(function (response) {
                         if (response.song !== '') {
                             spotifyAPI(response.song);
+                            fs.appendFileSync('log.txt', response.song + '\n');
                         } else {
                             spotifyAPI('all+the+small+things')
                         };
@@ -188,6 +192,7 @@ if (inputIndex1 === undefined) {
                     }])
                     .then(function (response) {
                         if (response.band !== '') {
+                            fs.appendFileSync('log.txt', response.band + '\n');
                             bandsInTown(response.band);
                         } else {
                             bandsInTown('daysndaze');
@@ -202,6 +207,7 @@ if (inputIndex1 === undefined) {
                     }])
                     .then(function (response) {
                         if (response.movie !== '') {
+                            fs.appendFileSync('log.txt', response.movie + '\n');
                             OMDB(response.movie);
                         } else {
                             OMDB('Mr Nobody');
