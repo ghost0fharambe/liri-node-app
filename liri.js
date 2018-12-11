@@ -2,10 +2,11 @@
 require('dotenv').config();
 var keys = require("./keys.js");
 var fs = require('fs');
-var path = require('path');
+// var path = require('path');
 var Spotify = require('node-spotify-api');
 var axios = require('axios');
 var moment = require('moment');
+var inquirer = require('inquirer')
 
 /* Spotify ID constructor */
 var spotify = new Spotify(keys.spotify);
@@ -130,8 +131,55 @@ function spotifyAPI(song) {
 }
 
 function doWhatSays() {
-    var whatSays = fs.readFileSync("random.txt", "utf8").split(',');    
+    var whatSays = fs.readFileSync("random.txt", "utf8").split(',');
     if (whatSays[0] === 'spotify-this') {
         spotifyAPI(whatSays[1]);
     }
+}
+
+
+/* Code to use with inquirer */
+if (inputIndex1 === undefined) {
+    inquirer
+        .prompt([{
+            type: 'list',
+            message: 'Which program do you want to run?',
+            choices: ['spotify-this', 'concert-this', 'movie-this', 'do-what-it-says'],
+            name: 'program'
+        }])
+        .then(function (response) {
+            if (response.program === 'spotify-this') {
+                inquirer
+                    .prompt([{
+                        type: 'input',
+                        message: 'Enter your song choice: ',
+                        name: 'song'
+                    }])
+                    .then(function (response) {
+                        spotifyAPI(response.song);
+                    });
+            } else if (response.program === 'concert-this') {
+                inquirer
+                    .prompt([{
+                        type: 'input',
+                        message: 'Enter Band name: ',
+                        name: 'band'
+                    }])
+                    .then(function (response) {
+                        bandsInTown(response.band);
+                    });
+            } else if (response.program === 'movie-this') {
+                inquirer
+                    .prompt([{
+                        type: 'input',
+                        message: 'Enter Movie name: ',
+                        name: 'movie'
+                    }])
+                    .then(function (response) {
+                        OMDB(response.movie);
+                    });
+            } else if (response.program === 'do-what-it-says') {
+                doWhatSays();
+            }
+        });
 }
