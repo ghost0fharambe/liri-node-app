@@ -56,9 +56,12 @@ if (inputIndex1 === "spotify-this") {
 }
 /* End spotify-this code */
 
+
+/* Begin do-what-it-says code */
 if (inputIndex1 === 'do-what-it-says') {
     doWhatSays();
 }
+/* End do-what-it-says code */
 
 
 /* Function to run OMDB api calls */
@@ -93,16 +96,18 @@ function bandsInTown(artist) {
     axios.get("https://rest.bandsintown.com/artists/" + artist + "/events?app_id=codingbootcamp&date=upcoming")
         .then(function (response) {
             var rData = response.data;
-            console.log(response.data[0].lineup);
             for (var i = 0; i < rData.length; i++) {
-                var venue = rData[i].venue.name
-                var city = rData[i].venue.city
-                var region = rData[i].venue.region
-                var time = moment(rData.datetime).format('MM/DD/YYYY')
+                var lineup = rData[i].lineup;
+                var venue = rData[i].venue.name;
+                var city = rData[i].venue.city;
+                var region = rData[i].venue.region;
+                var country = rData[i].venue.country
+                var time = moment(rData[i].datetime).format('MM/DD/YYYY');
 
                 console.log(`Event #${i}`);
+                console.log(`Lineup: ${lineup}`);
                 console.log(`Venue: ${venue}`);
-                console.log(`Location: ${city}, ${region}`);
+                console.log(`Location: ${city} ${region} ${country}`);
                 console.log(`Date: ${time} \n`);
 
                 log.push("Band Data: ", `event#${i}`, venue, city, region, time);
@@ -139,6 +144,7 @@ function spotifyAPI(song) {
             console.log(err);
         });
 }
+
 
 /* Runs program with parameters specified in random.txt */
 function doWhatSays() {
