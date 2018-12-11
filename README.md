@@ -45,28 +45,33 @@ SPOTIFY_SECRET=your-spotify-secret
 node liri.js movie-this <movie-name>
 ```
 Finds information about given movie
+
 e.g. `node liri.js movie-this lord of the rings`
 ***
 ```javascript
 node liri.js concert-this <band-name>
 ```
 Finds upcoming events involving given band
+
 e.g. `node liri.js concert-this gin blossoms`
 ***
 ```javascript
 node liri.js spotify-this <song-name>
 ```
 Finds information about given song
+
 e.g. `node liri.js spotify-this your heart is a muscle the size of your fist`
 ***
 ```javascript
 node liri.js do-what-it-says
 ```
 Runs program with specifications listed in `random.txt`
+
 e.g. `node liri.js do-what-it-says`
 ***
 ```javascript
 node liri.js
 ```
 Runs program with inquirer interface
+
 e.g. `node liri.js`
