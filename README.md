@@ -35,7 +35,8 @@ After installing `dotenv` with `npm`:
 * create a file name `.env`
 * register for spotify API key
 * Copy/Paste this code: 
-```SPOTIFY_ID=your-spotify-apikey
+```
+SPOTIFY_ID=your-spotify-apikey 
 SPOTIFY_SECRET=your-spotify-secret
 ```
 
